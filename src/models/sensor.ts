@@ -1,6 +1,3 @@
 export interface Sensor {
-	id: number;
-	name: string;
-	date: Date;
-	value: number;
+	[name: string]: number | string;
 }
