@@ -1,5 +1,5 @@
 import { Socket, io } from "socket.io-client";
-import { Sensor, SensorsTypes } from "../../models";
+import { SensorsTypes } from "../../models";
 
 export class SocketService {
 	private socket: Socket;
@@ -22,10 +22,10 @@ export class SocketService {
 
 	public listenEvent(
 		event: string | typeof SensorsTypes,
-		callback: (content: Sensor) => void
+		callback: (content: string) => void
 	) {
 		this.socket.on(event as string, (content: string) => {
-			callback(JSON.parse(content));
+			callback(content);
 		});
 	}
 
