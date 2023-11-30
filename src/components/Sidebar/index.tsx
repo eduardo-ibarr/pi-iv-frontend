@@ -13,7 +13,7 @@ import { useAppContext } from "../../hooks/app/useAppProvider";
 
 const options = [
 	["Leituras em Tempo Real", "real-time"],
-	["Leituras por Período", "period"],
+	["Leituras por Períodos", "period"],
 	["Controle de Irrigação", "control"],
 ];
 
